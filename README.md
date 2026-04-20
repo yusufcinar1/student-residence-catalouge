@@ -110,6 +110,32 @@ Response example:
     }
 ]
 ```
+2. Create Student
+
+POST /api/students/
+
+Request:
+
+{
+  "name": "John Doe",
+  "email": "john@example.com"
+}
+
+
+
+3. Create Reservation
+
+POST /api/reservations/
+
+Request:
+
+{
+  "student": 1,
+  "room": 1,
+  "start_date": "2026-01-01",
+  "end_date": "2026-01-10"
+}
+
 
 ---
 
@@ -131,10 +157,10 @@ student_residence/
 
 ## Notes
 
-* Uses SQLite for simplicity (no external database required)
-* All models are manageable via Django Admin
-* API returns JSON responses only
-
+Uses SQLite for simplicity
+db.sqlite3 is ignored in git
+All models are manageable via Django Admin
+API returns JSON responses only
 ---
 
 ## Author
