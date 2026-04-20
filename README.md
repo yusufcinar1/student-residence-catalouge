@@ -31,7 +31,7 @@ A simple Django application to manage student residences, rooms, students, and r
 
 ```bash
 git clone https://github.com/yusufcinar1/student-residence-catalouge
-cd student-residence
+cd student-residence-catalouge
 ```
 
 ### 2. Create virtual environment
@@ -96,11 +96,18 @@ Response example:
 
 ```json
 [
-  {
-    "id": 1,
-    "name": "Istanbul Yurt",
-    "city": "Istanbul",
-  }
+    {
+        "id": 1,
+        "name": "Istanbul Yurt",
+        "city": "Istanbul",
+        "rooms": [
+            {
+                "id": 1,
+                "code": "A101",
+                "max_occupancy": 2
+            }
+        ]
+    }
 ]
 ```
 
@@ -112,8 +119,7 @@ Response example:
 ```
 student_residence/
 ├── manage.py
-├── db.sqlite3
-├── app/
+├── core/
 │   ├── models.py
 │   ├── views.py
 │   ├── admin.py
