@@ -8,12 +8,12 @@ class ResidenceListView(generics.ListAPIView):
     serializer_class = ResidenceSerializer
 
 
-class StudentCreateView(generics.CreateAPIView):
+class StudentListCreateView(generics.ListCreateAPIView):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
 
 
-class ReservationCreateView(generics.CreateAPIView):
+class ReservationListCreateView(generics.ListCreateAPIView):
     queryset = Reservation.objects.all()
     serializer_class = ReservationSerializer
 
